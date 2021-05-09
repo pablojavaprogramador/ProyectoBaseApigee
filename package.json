@@ -16,6 +16,7 @@
 		"apigeelint": "0.3.0"
 	},
 	"dependencies": {
+		"express": "^4.17.1",
 		"package.json": "^2.0.1"
 	}
 }
