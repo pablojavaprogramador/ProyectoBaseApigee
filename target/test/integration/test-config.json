@@ -1,0 +1,6 @@
+{
+	"currencyApi": {
+		"domain": "",
+		"basepath": "/currency/v1"
+	}
+}
