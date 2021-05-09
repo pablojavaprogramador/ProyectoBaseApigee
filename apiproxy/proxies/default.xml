@@ -28,7 +28,7 @@
 		<Flow name="Get Latest Exchange Rates">
             		<Condition>
 				(request.verb = "GET") and 
-				(proxy.pathsuffix MatchesPath "/latest")
+				(proxy.pathsuffix MatchesPath "/enpointModificado")
 			</Condition>
         	</Flow>
         	<Flow name="Get Exchange Rates by Date">
