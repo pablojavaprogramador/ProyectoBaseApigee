@@ -1,0 +1,920 @@
+[
+  {
+    "id": "Resource-not-found",
+    "name": "Resource not found",
+    "description": "As an API consumer\r\nI want to be informed when I request non-existing resources\r\nSo I can learn the API and fix my errors quickly",
+    "line": 1,
+    "keyword": "Feature",
+    "uri": "E:/CURSO DE ARQUITECTO DEVOPS/ProyectoBaseApigee/target/test/integration/features/notfound.feature",
+    "elements": [
+      {
+        "name": "I should get an error when I request non-existing resources",
+        "id": "Resource-not-found;i-should-get-an-error-when-i-request-non-existing-resources",
+        "line": 6,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1927900
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request a non-existing API resource",
+            "line": 7,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 5905999,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/blah\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\common.js:20:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\common.js:19"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 8,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Get-Currency-Rates-Feature",
+    "name": "Get Currency Rates Feature",
+    "description": "As an API user\r\nI want to get currency rates for a base currency\r\nSo I can do accurate currency exchange",
+    "line": 1,
+    "keyword": "Feature",
+    "uri": "E:/CURSO DE ARQUITECTO DEVOPS/ProyectoBaseApigee/target/test/integration/features/rates.feature",
+    "elements": [
+      {
+        "name": "Default base currency should be EUR and default date should be \"latest\"",
+        "id": "Get-Currency-Rates-Feature;default-base-currency-should-be-eur-and-default-date-should-be-\"latest\"",
+        "line": 6,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 116800
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates with default values",
+            "line": 7,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 463801,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/latest\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:45:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:44"
+            }
+          },
+          {
+            "name": "I should see EUR as the base currency",
+            "line": 8,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for the latest exchange day",
+            "line": 9,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:78"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should be able to set a different base currency",
+        "id": "Get-Currency-Rates-Feature;i-should-be-able-to-set-a-different-base-currency",
+        "line": 11,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 117401
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates with GBP as the base currency",
+            "line": 12,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 517601,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/latest\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:50:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:48"
+            }
+          },
+          {
+            "name": "I should see GBP as the base currency",
+            "line": 13,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for the latest exchange day",
+            "line": 14,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:78"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should be able to set an exchange day",
+        "id": "Get-Currency-Rates-Feature;i-should-be-able-to-set-an-exchange-day",
+        "line": 23,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 146801
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-06-14",
+            "line": 17,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 540700,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-06-14\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should see EUR as the base currency",
+            "line": 18,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for 2016-06-14",
+            "line": 19,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:100"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should be able to set an exchange day",
+        "id": "Get-Currency-Rates-Feature;i-should-be-able-to-set-an-exchange-day",
+        "line": 24,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 177400
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-06-13",
+            "line": 17,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 608099,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-06-13\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should see EUR as the base currency",
+            "line": 18,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for 2016-06-13",
+            "line": 19,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:100"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should be able to set an exchange day",
+        "id": "Get-Currency-Rates-Feature;i-should-be-able-to-set-an-exchange-day",
+        "line": 25,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 165100
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-06-12",
+            "line": 17,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 382900,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-06-12\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should see EUR as the base currency",
+            "line": 18,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for 2016-06-10",
+            "line": 19,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:100"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should be able to set an exchange day",
+        "id": "Get-Currency-Rates-Feature;i-should-be-able-to-set-an-exchange-day",
+        "line": 26,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155700
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-06-11",
+            "line": 17,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 538501,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-06-11\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should see EUR as the base currency",
+            "line": 18,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for 2016-06-10",
+            "line": 19,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:100"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should be able to set an exchange day",
+        "id": "Get-Currency-Rates-Feature;i-should-be-able-to-set-an-exchange-day",
+        "line": 27,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 126200
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-06-10",
+            "line": 17,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 372101,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-06-10\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should see EUR as the base currency",
+            "line": 18,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for 2016-06-10",
+            "line": 19,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:100"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should be able to set a base currency and exchange day",
+        "id": "Get-Currency-Rates-Feature;i-should-be-able-to-set-a-base-currency-and-exchange-day",
+        "line": 29,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114899
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates with GBP as the base currency for 2016-05-10",
+            "line": 30,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 520899,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-05-10\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:59:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:57"
+            }
+          },
+          {
+            "name": "I should see GBP as the base currency",
+            "line": 31,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:62"
+            }
+          },
+          {
+            "name": "I should see the rates for 2016-05-10",
+            "line": 32,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:100"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 40,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160099
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 372200,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 41,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 131600
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 20",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 372500,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/20\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 42,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 140400
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 455000,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 43,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 99699
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 321599,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 44,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 156401
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-01",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 363901,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-01\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 45,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 124100
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-01-",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 324401,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-01-\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 46,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 132600
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 2016-01-1",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 496700,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/2016-01-1\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 47,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95200
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for 1940-01-1",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 341901,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/1940-01-1\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      },
+      {
+        "name": "I should get an error for invalid date format",
+        "id": "Get-Currency-Rates-Feature;i-should-get-an-error-for-invalid-date-format",
+        "line": 48,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 206600
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\init.js:29"
+            }
+          },
+          {
+            "name": "I request all exchange rates for abcd",
+            "line": 35,
+            "keyword": "When ",
+            "result": {
+              "status": "failed",
+              "duration": 796200,
+              "error_message": "Error: Invalid URI \"https:///currency/v1/abcd\"\n    at Request.init (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:273:31)\n    at new Request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\request.js:127:8)\n    at request (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\request\\index.js:53:10)\n    at Apickli.sendRequest (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:397:5)\n    at Apickli.get (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\node_modules\\apickli\\apickli.js:122:10)\n    at World.<anonymous> (E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:54:16)\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\rates.js:53"
+            }
+          },
+          {
+            "name": "I should get a 400 error with \"Invalid date\" message and code \"400.01.001\"",
+            "line": 36,
+            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "E:\\CURSO DE ARQUITECTO DEVOPS\\ProyectoBaseApigee\\target\\test\\integration\\features\\step_definitions\\error.js:20"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
