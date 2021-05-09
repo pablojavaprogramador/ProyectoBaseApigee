@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="hostingtarget">
+    <Basepaths>/hostingtarget</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1604686618159</CreatedAt>
+    <CreatedBy>tecnoplacita@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>hostingtarget</DisplayName>
+    <HostedManifestVersion>SHA-512:79eee3a6f5cca850afe0f7acf3370608b759fcdfafdea4580ae73818be4339edfc6ee49505e3cf9923f76a7a309a69716dbbbe314e8486dfe56bb22ab313b523:us-east-1</HostedManifestVersion>
+    <LastModifiedAt>1619974029063</LastModifiedAt>
+    <LastModifiedBy>tecnoplacita@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:f51c94332bfe99414d2aaed143a2da65a16655365dc669d5d8a1bdcc40c172dfca426e4845e5bddee6e714c046cf6416c20fd491892a064630e56737aed9af00:us-east-1</ManifestVersion>
+    <Policies/>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>hosted://app.yaml</Resource>
+        <Resource>hosted://index.js</Resource>
+        <Resource>hosted://package.json</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
