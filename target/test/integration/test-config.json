@@ -1,6 +1,6 @@
 {
 	"currencyApi": {
-		"domain": "",
-		"basepath": "/currency/v1"
+		"domain": "www.google.com.mx",
+		"basepath": "/"
 	}
 }
